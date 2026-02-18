@@ -37,7 +37,7 @@ The script will automatically install Tailscale and attempt to connect.
 2.  **Do not log in yet.** Open the app, click the Tailscale icon in the menu bar, and ensure you are logged out.
 3.  Open **Terminal** and run the following command to configure the login server:
     ```bash
-    defaults write io.tailscale.ipn.macsys ControlURL [https://hs.socratecloud.com](https://hs.socratecloud.com)
+    defaults write io.tailscale.ipn.macsys ControlURL https://hs.socratecloud.com
     ```
 4.  Restart the Tailscale application.
 5.  Click **Log in** from the menu bar icon. It should direct you to `hs.socratecloud.com`.
@@ -51,7 +51,7 @@ If you prefer the command line or don't use the App Store:
     ```
 2.  Connect to the network:
     ```bash
-    sudo tailscale up --login-server=[https://hs.socratecloud.com](https://hs.socratecloud.com)
+    sudo tailscale up --login-server=https://hs.socratecloud.com
     ```
 
 ---
@@ -62,7 +62,7 @@ If you prefer the command line or don't use the App Store:
 Use the automated install script provided by Tailscale:
 
 ```bash
-curl -fsSL [https://tailscale.com/install.sh](https://tailscale.com/install.sh) | sh
+curl -fsSL https://tailscale.com/install.sh | sh
 
 ```
 
@@ -71,7 +71,7 @@ curl -fsSL [https://tailscale.com/install.sh](https://tailscale.com/install.sh) 
 Once installed, run the `up` command specifying our login server:
 
 ```bash
-sudo tailscale up --login-server=[https://hs.socratecloud.com](https://hs.socratecloud.com)
+sudo tailscale up --login-server=https://hs.socratecloud.com
 
 ```
 
@@ -86,6 +86,3 @@ Copy the URL provided in the terminal output (e.g., `https://hs.socratecloud.com
 * **"User not enabled" error:** Please contact the administrator to have your user approved in the ACLs.
 * **Windows SmartScreen warning:** The installation script is internal and not signed by Microsoft. This warning is expected; please proceed by clicking "Run anyway."
 
-```
-
-```
